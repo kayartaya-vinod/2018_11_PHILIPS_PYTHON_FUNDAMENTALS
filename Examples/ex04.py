@@ -3,6 +3,7 @@ ex04
 
 Calendar functionalities
 '''
+from datetime import date
 
 def is_leap(year):
     if year != None and type(year) != int: raise Exception('Invalid type for year. Only int is allowed')
@@ -41,7 +42,15 @@ def date_serial(day, month, year):
 
     return ds
 
-def print_calendar(month, year):
+def print_calendar(month = None, year = None):
+    
+    dt = date.today()
+    if month == None: month = dt.month
+    if year == None: year = dt.year
+
+    dt = date(year, month, 1)
+    title = '{} {}'.format(dt.strftime('%B'), year)
+    print(title.center(20))
     print('Su Mo Tu We Th Fr Sa')
     print('--------------------')
     max_days = max_days_in_month(month, year)

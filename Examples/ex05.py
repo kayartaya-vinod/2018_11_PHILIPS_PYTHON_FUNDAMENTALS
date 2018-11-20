@@ -29,4 +29,7 @@ def test04():
     y = int(input('Enter year: '))
     print_calendar(m, y)
 
+def test05():
+    print_calendar()
+
 if __name__=='__main__': test04()
