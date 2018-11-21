@@ -64,9 +64,9 @@ def main():
     print(c2)
     print(c3)
     c2 += 5.0
-    print(c2)
+    print('after c2 += 5.0, c2 is', c2)
     c2 += c3
-    print(c2)
+    print('after c2 += c3, c2 is', c2)
 
     print('c2 < c3 is', c2 < c3)
     print('c2 < 15.0 is', c2 < 15.0)
